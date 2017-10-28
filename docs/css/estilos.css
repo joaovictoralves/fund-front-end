@@ -87,6 +87,21 @@
     padding-left: 25px;
 }
 
+/* Identificadores */
+.identificador {
+
+}
+
+.identificador__titulo {
+    text-align: center;
+}
+
+.identificador__grupo {
+    padding: 15px;
+    border: rgb(151, 151, 151) 0.5px solid;
+    border-radius: 5px;
+}
+
 /* Rodapé */
 .rodape {
     border-style: ridge;
@@ -105,4 +120,35 @@
     text-decoration: none;
     color: #c5c5c5;
     text-align: center;
+}
+
+/* ----------------------- *\
+   GRUPO-ENTRADA
+\* ----------------------- */
+.grupo-entrada {
+	margin-bottom: 15px;
+}
+
+
+.grupo-entrada > label {
+	display: block;
+
+	font-weight: bold;
+}
+
+/* ----------------------- *\
+   CAMPO
+\* ----------------------- */
+.campo {
+	display: block;
+	width: 100%;
+	height: 2.8em;
+
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+
+	background-color: #fff;
+
+	font-size: 1.4rem;
 }

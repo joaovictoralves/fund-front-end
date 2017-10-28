@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
             
         <link rel="stylesheet" href="css/bootstrap-grid.min.css"/>
+        <link rel="stylesheet" href="css/base.css"/>
         <link rel="stylesheet" href="css/estilos.css"/>
     </head>
     <body>
@@ -28,15 +29,77 @@
         <article class="conteudo">
             <h1 class="conteudo__titulo">Oi, aqui estou eu!</h1>
             <div class="conteudo__conteudo">
-                <p>
-                    Mussum Ipsum, cacilds vidis litro abertis. Manduma pindureta quium dia nois paga. Copo furadis é disculpa de bebadis, arcu quam euismod magna. Suco de cevadiss deixa as pessoas mais interessantis. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.
-                </p>
-                <p>
-                    Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss deixa as pessoas mais interessantis. Aenean aliquam molestie leo, vitae iaculis nisl. Manduma pindureta quium dia nois paga. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!
-                </p>
+
+                <section id="identificadores">
+                    <div class="identificador">
+                        <div class="container">
+                            <form>
+                                <h2 class="identificador__titulo">Identificador</h2>
+                                <div class="grupo-entrada">
+                                    <label for="tipo-identificador">Tipo do identificador</label>
+                                    <select id="tipo-identificador" class="campo">
+                                        <option value="unico" label="Único dentro da organização" selected/>
+                                        <option value="prontuario" label="Número do prontuário" />
+                                        <option value="radiologia" label="Radiologia" />
+                                        <option value="patologia" label="Patologia" />
+                                        <option value="farmarcia" label="Farmácia"/>
+                                    </select>
+                                </div>
+                                <div class="grupo-entrada">
+                                    <label for="designacao">Designação</label>
+                                    <input type="text" id="designacao" name="designacao" class="campo"/>
+                                </div>
+                                <div class="grupo-entrada">
+                                    <label for="emissor">Emissor</label>
+                                    <input type="text" id="emissor" name="emissor" class="campo"/>
+                                </div>
+                                <div class="grupo-entrada">
+                                    <label for="area-geografica">Área geográfica</label>
+                                    <select id="area-geografica" class="campo">
+                                        <option value="local" label="Local"/ selected />
+                                        <option value="area" label="Área/região/distrito" />
+                                        <option value="estado" label="Estado/província/território" />
+                                        <option value="nacional" label="Nacional" />
+                                    </select>
+                                </div>
+                                <div class="grupo-entrada">
+                                    <label for="data">Data</label>
+                                    <input type="date" id="data" name="data" class="campo" />
+                                </div>
+                                <div class="identificador__grupo">
+                                    <div class="grupo-entrada">
+                                        <label for="tipo-certidao">Tipo de certidão</label>
+                                        <select id="tipo-certidao" class="campo">
+                                            <option value="nascimento" label="Nascimento" selected/>
+                                            <option value="casamento" label="Casamento" />
+                                            <option value="divorcio" label="Divórcio" />
+                                        </select>
+                                    </div>
+                                    <div class="grupo-entrada">
+                                        <label for="nome-cartorio">Nome do cartório</label>
+                                        <input type="text" id="nome-cartorio" name="nome-cartorio" class="campo"/>
+                                    </div>
+                                    <div class="grupo-entrada">
+                                        <label for="livro">Livro</label>
+                                        <input type="text" id="livro" name="livro" class="campo" />
+                                    </div>
+                                    <div class="grupo-entrada">
+                                        <label for="folha">Folha</label>
+                                        <input type="text" id="folha" name="folha" class="campo" />
+                                    </div>
+                                    <div class="grupo-entrada">
+                                        <label for="termo">Termo</label>
+                                        <input type="text" id="termo" name="termo" class="campo" />
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
             </div>
         </article>
-        <footer class="rodape">
+        <footer class="rodape" style="display: none">
             <a href="#" class="rodape__link">Fale conosco</a>
             <a href="#" class="rodape__link">Fale conosco</a>
             <a href="#" class="rodape__link">Fale conosco</a>
