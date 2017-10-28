@@ -1,0 +1,108 @@
+/* CABEÇALHO */
+.cabecalho {
+    border-style: ridge;
+    border-radius: 20px;
+}
+
+.cabecalho__logomarca {
+    text-align: left;
+    margin: 15px;
+    display: inline-block;
+}
+
+.cabecalho__menu {
+    display: inline-block;
+    margin: 30px;
+    box-sizing: content-box;
+    float: right;
+}
+
+.cabecalho__link {
+    text-decoration: none;
+    border-style: solid;
+    border-width: 1px;
+    border-color: aquamarine;
+    border-radius: 5px;
+    background-color: aquamarine;
+    color: #3f3f3f;
+    margin: 2px;
+    padding: 5px;
+}
+
+/* MENU LATERAL */
+.menu-lateral {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    padding: 0em;
+    margin: 1em 0em 0em 0em;
+    width: 18%;
+    height: 35em;
+    text-align: left;
+    display: inline-block;
+}
+
+.menu-lateral__botao {
+    display: block;
+    padding: 0.3em;
+    
+    text-decoration: none;
+    text-align: center;
+    color: dimgray;
+    
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c3c3c3;
+    background-color: azure;
+    border-radius: 2px;
+}
+
+/* Conteúdo */
+.conteudo {
+    display: inline-block;
+    float: right;
+    
+    margin-top: 1em;
+    margin-right: 5px;
+    padding-top: 0px;
+    width: 81%;
+    height: 30em;
+}
+
+.conteudo__titulo {
+    text-align: center;
+    padding: 5px;
+}
+
+.conteudo__titulo::first-letter{
+    color: red;
+}
+
+.conteudo p {
+    margin: 0em 0em 1em 0em;
+}
+
+.conteudo p::first-letter {
+    padding-left: 25px;
+}
+
+/* Rodapé */
+.rodape {
+    border-style: ridge;
+    border-radius: 20px;
+    height: 5em;
+    
+    margin-top: 1em;
+    
+    background: #3a3a3a;
+}
+
+.rodape__link {
+    display: block;
+    
+    
+    text-decoration: none;
+    color: #c5c5c5;
+    text-align: center;
+}
