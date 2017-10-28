@@ -125,6 +125,7 @@
                     <section id="dados-demograficos">
                         <div class="conteudo__grupo">
                             <div class="container">
+                                <h2 class="conteudo__grupo-titulo">Dados demográficos</h2>
                                 <div class="conteudo__sub-grupo">
                                     <div class="grupo-entrada">
                                         <label for="mae">Mãe</label>
@@ -168,14 +169,8 @@
                                             </div>
                                         </div>
                                         <div class="grupo-entrada">
-                                            <label>Fonte de notificação</label>
-                                            <div class="grupo-entrada__radio-box">
-                                                <input type="radio" name="fonte-notificacao-nascimento" value="cartorio"/> Cartório<br/>
-                                                <input type="radio" name="fonte-notificacao-nascimento" value="prestador"/> Prestador de assistência à saúde<br/>
-                                                <input type="radio" name="fonte-notificacao-nascimento" value="parente"/> Parente<br/>
-                                                <input type="radio" name="fonte-notificacao-nascimento" value="outro"/> Outro<br/>
-                                                <input type="radio" name="fonte-notificacao-nascimento" value="desconhecido"/> Desconhecido<br/>
-                                            </div>
+                                            <label>Seguimento</label>
+                                            <input type="checkbox" name="precisa-segmento" value="precisa-seguimento"> Data precisa de seguimento
                                         </div>
                                     </div>
                                     <div class="conteudo__sub-grupo">
@@ -219,6 +214,49 @@
                                             <input type="radio" name="raca-cor" value="parda"/> parda<br/>
                                             <input type="radio" name="raca-cor" value="amarela"/> amarela<br/>
                                             <input type="radio" name="raca-cor" value="indigena"/> indígena<br/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="conteudo__sub-grupo">
+                                    <div class="grupo-entrada">
+                                        <label>Sexo</label>
+                                        <div class="grupo-entrada__radio-box">
+                                            <input type="radio" name="sexo" value="M"/> masculino<br/>
+                                            <input type="radio" name="sexo" value="F"/> feminino<br/>
+                                            <input type="radio" name="sexo" value="I"/> intersexo ou indeterminado<br/>
+                                            <input type="radio" name="sexo" value="U"/> não declarado<br/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="conteudo__sub-grupo">
+                                    <div class="grupo-entrada">
+                                        <label>Nacionalidade</label>
+                                        <div class="grupo-entrada__radio-box">
+                                            <input type="radio" name="nacionalidade" value="brasileiro"/> Brasileiro 
+                                            <input type="radio" name="nacionalidade" value="estrangeiro"/> Estrangeiro<br/>
+                                        </div>
+                                    </div>
+                                    <div class="conteudo__sub-grupo">
+                                        <div class="grupo-entrada">
+                                            <label for="estado-nascimento">Estado de nascimento</label>
+                                            <select id="estado-nascimento" class="campo">
+                                                <option label="Selecione o estado" selected disabled/>
+                                                <option value="AC" label="Acre" />
+                                                <option value="BA" label="Bahia" />
+                                                <option value="GO" label="Goiás" />
+                                                <option value="SP" label="São Paulo" />
+                                            </select>
+                                        </div>
+                                        <div class="grupo-entrada">
+                                            <label for="cidade-nascimento">&lt;&lt;Nome estado&gt;&gt; (municípios)</label>
+                                            <select id="cidade-nascimento" class="campo">
+                                                <option label="Selecione o estado" selected disabled/>
+                                                <option value="rio-branco" label="Rio Branco" />
+                                                <option value="salvador" label="Salvador" />
+                                                <option value="goiania" label="Goiânia" />
+                                                <option value="sao-paulo" label="São Paulo" />
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
