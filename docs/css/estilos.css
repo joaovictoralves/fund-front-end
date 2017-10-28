@@ -130,6 +130,9 @@
 	margin-bottom: 15px;
 }
 
+.grupo-entrada__radio-box {
+    display: block;
+}
 
 .grupo-entrada > label {
 	display: block;

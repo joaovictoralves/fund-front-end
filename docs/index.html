@@ -29,11 +29,10 @@
         <article class="conteudo">
             <h1 class="conteudo__titulo">Oi, aqui estou eu!</h1>
             <div class="conteudo__conteudo">
-
-                <section id="identificadores">
-                    <div class="conteudo__grupo">
-                        <div class="container">
-                            <form>
+                <form>
+                    <section id="identificadores">
+                        <div class="conteudo__grupo">
+                            <div class="container">
                                 <h2 class="conteudo__grupo-titulo">Identificador</h2>
                                 <div class="grupo-entrada">
                                     <label for="tipo-identificador">Tipo do identificador</label>
@@ -114,11 +113,119 @@
                                         <input type="text" id="zona" name="zona" class="campo" />
                                     </div>
                                 </div>
-                            </form>
+                                
+                            </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
 
+                    <!--
+                        Colocar os nomes aqui
+                    -->
+
+                    <section id="dados-demograficos">
+                        <div class="conteudo__grupo">
+                            <div class="container">
+                                <div class="conteudo__sub-grupo">
+                                    <div class="grupo-entrada">
+                                        <label for="mae">Mãe</label>
+                                        <input type="text" id="mae" name="mae" class="campo" placeholder="Nome completo da Mãe"/>
+                                    </div>
+                                    <div class="grupo-entrada">
+                                        <label for="pai">Pai</label>
+                                        <input type="text" id="pai" name="pai" class="campo" placeholder="Nome completo do Pai"/>
+                                    </div>
+                                    <div class="grupo-entrada">
+                                        <label>Situação familiar (convive com)</label>
+                                        <div class="grupo-entrada__radio-box">
+                                            <input type="radio" name="situacao" value="companheiro-filhos"/> Companheiro(a) e filho(s)<br/>
+                                            <input type="radio" name="situacao" value="companheiro-casado-sem-filhos"/> Companheiro(a) com laços conjugais e sem filho(s)<br/>
+                                            <input type="radio" name="situacao" value="companheiro-filhos-familiares"/> Companheiro(a), com filho(s) e/ou outro(s) familiar(es)<br/>
+                                            <input type="radio" name="situacao" value="familiares"/> Familiar(es) sem companheiro(a)<br/>
+                                            <input type="radio" name="situacao" value="companheiro"/> Outra(s) pessoa(s) sem laços consanguíneos e/ou laços conjugais<br/>
+                                            <input type="radio" name="situacao" value="sozinho"/> Vive só<br/>
+                                        </div>
+                                    </div>
+                                    <div class="conteudo__sub-grupo">
+                                        <div class="grupo-entrada">
+                                            <label for="data-nascimento">Data de nascimento</label>
+                                            <input type="date" id="data-nascimento" name="data-nascimento" class="campo" />
+                                        </div>
+                                        <div class="grupo-entrada">
+                                            <label>Indicador de acurária</label>
+                                            <div class="grupo-entrada__radio-box">
+                                                Dia:
+                                                <input type="radio" name="acuracia-dia-nascimento" value="acurado"/> Acurado
+                                                <input type="radio" name="acuracia-dia-nascimento" value="estimado"/> Estimado
+                                                <input type="radio" name="acuracia-dia-nascimento" value="Desconhecido"/> Desconhecido<br/>
+                                                Mês:
+                                                <input type="radio" name="acuracia-mes-nascimento" value="acurado"/> Acurado
+                                                <input type="radio" name="acuracia-mes-nascimento" value="estimado"/> Estimado
+                                                <input type="radio" name="acuracia-mes-nascimento" value="Desconhecido"/> Desconhecido<br/>
+                                                Ano:
+                                                <input type="radio" name="acuracia-ano-nascimento" value="acurado"/> Acurado
+                                                <input type="radio" name="acuracia-ano-nascimento" value="estimado"/> Estimado
+                                                <input type="radio" name="acuracia-ano-nascimento" value="Desconhecido"/> Desconhecido<br/>
+                                            </div>
+                                        </div>
+                                        <div class="grupo-entrada">
+                                            <label>Fonte de notificação</label>
+                                            <div class="grupo-entrada__radio-box">
+                                                <input type="radio" name="fonte-notificacao-nascimento" value="cartorio"/> Cartório<br/>
+                                                <input type="radio" name="fonte-notificacao-nascimento" value="prestador"/> Prestador de assistência à saúde<br/>
+                                                <input type="radio" name="fonte-notificacao-nascimento" value="parente"/> Parente<br/>
+                                                <input type="radio" name="fonte-notificacao-nascimento" value="outro"/> Outro<br/>
+                                                <input type="radio" name="fonte-notificacao-nascimento" value="desconhecido"/> Desconhecido<br/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="conteudo__sub-grupo">
+                                        <div class="grupo-entrada">
+                                            <label for="data-obito">Óbito</label>
+                                            <input type="date" id="data-obito" name="data-obito" class="campo" />
+                                        </div>
+                                        <div class="grupo-entrada">
+                                            <label>Indicador de acurária</label>
+                                            <div class="grupo-entrada__radio-box">
+                                                Dia:
+                                                <input type="radio" name="acuracia-dia-obito" value="acurado"/> Acurado
+                                                <input type="radio" name="acuracia-dia-obito" value="estimado"/> Estimado
+                                                <input type="radio" name="acuracia-dia-obito" value="Desconhecido"/> Desconhecido<br/>
+                                                Mês:
+                                                <input type="radio" name="acuracia-mes-obito" value="acurado"/> Acurado
+                                                <input type="radio" name="acuracia-mes-obito" value="estimado"/> Estimado
+                                                <input type="radio" name="acuracia-mes-obito" value="Desconhecido"/> Desconhecido<br/>
+                                                Ano:
+                                                <input type="radio" name="acuracia-ano-obito" value="acurado"/> Acurado
+                                                <input type="radio" name="acuracia-ano-obito" value="estimado"/> Estimado
+                                                <input type="radio" name="acuracia-ano-obito" value="Desconhecido"/> Desconhecido<br/>
+                                            </div>
+                                        </div>
+                                        <div class="grupo-entrada">
+                                            <label>Fonte de notificação</label>
+                                            <div class="grupo-entrada__radio-box">
+                                                <input type="radio" name="fonte-notificacao-obito" value="cartorio"/> Cartório<br/>
+                                                <input type="radio" name="fonte-notificacao-obito" value="prestador"/> Prestador de assistência à saúde<br/>
+                                                <input type="radio" name="fonte-notificacao-obito" value="parente"/> Parente<br/>
+                                                <input type="radio" name="fonte-notificacao-obito" value="outro"/> Outro<br/>
+                                                <input type="radio" name="fonte-notificacao-obito" value="desconhecido"/> Desconhecido<br/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grupo-entrada">
+                                        <label>Raça/cor</label>
+                                        <div class="grupo-entrada__radio-box">
+                                            <input type="radio" name="raca-cor" value="branca"/> branca<br/>
+                                            <input type="radio" name="raca-cor" value="preta"/> preta<br/>
+                                            <input type="radio" name="raca-cor" value="parda"/> parda<br/>
+                                            <input type="radio" name="raca-cor" value="amarela"/> amarela<br/>
+                                            <input type="radio" name="raca-cor" value="indigena"/> indígena<br/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </form>
             </div>
         </article>
         <footer class="rodape" style="display: none">
