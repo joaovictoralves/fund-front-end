@@ -87,18 +87,17 @@
     padding-left: 25px;
 }
 
-/* Identificadores */
-.identificador {
+.conteudo__grupo {
 
 }
 
-.identificador__titulo {
+.conteudo__grupo-titulo {
     text-align: center;
 }
 
-.identificador__grupo {
+.conteudo__sub-grupo {
     margin-bottom: 15px;
-    
+
     padding: 15px;
     border: rgb(151, 151, 151) 0.5px solid;
     border-radius: 5px;
