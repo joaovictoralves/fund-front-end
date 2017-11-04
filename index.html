@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <title>Portal Saude</title>
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="resources/css/materialize.min.css" media="screen,projection"/>
+
+
+        <link rel="stylesheet" type="text/css" href="resources/css/estilos.css"/>
+
+    </head>
+    <body>
+        <nav role="navigation">
+            <div class="nav-wrapper container">
+                <a href="#" class="right brand-logo"><i class="material-icons left">healing</i><i class="material-icons left">local_hospital</i><i class="material-icons left">healing</i></a>
+                <ul class="left hide-on-med-and-down ">
+                    <li id="pagInicialLi" class="active"><a href="#" onclick="abrirNavBar(1)" >Página Inicial</a></li>
+                    <li id="cadastroLI"><a href="#" onclick="abrirNavBar(2)" >Cadastro SDA</a></li>
+                    <li id="pesquisaLI"><a href="#" onclick="abrirNavBar(3)" >Pesquisa SDA</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container" id="home">
+            <h3 class="materialize-red-text text-lighten-3 center">Portal de Saúde</h3>
+            <h3 class="materialize-red-text text-lighten-3 center">Sistema de cadastro de pessoa para serviço de assistência de sáude.</h3>
+            <h4 class="materialize-red-text text-lighten-3 center">Criado de acordo com as normas ABNT nbr 15985 26/10/2011</h4>
+        </div>
+
+        <div class="container ocultar" id="cadastro">
+            <h4 class="materialize-red-text text-lighten-3 center" id="h4Cadastrar"> Cadastrar SDA</h4>
+            <h4 class="materialize-red-text text-lighten-3 center ocultar" id="h4Alterar"> Alterar SDA</h4>
+
+            <div class="card-panel  grey lighten-2">
+                <table>
+                    <thead>
+                    <tr>
+                        <th id="text">
+                            Nome Completo do Paciente:
+                            <label id="nomeCompleto"> ****************************************************</label>
+                            <input type="hidden" id="idSDA" value="">
+                        </th>
+                    </tr>
+                    </thead>
+                </table>
+
+            </div>
+
+            <div class="card-panel  grey lighten-2" id="cadastroNome">
+                <table>
+                    <tr>
+                        <td >
+                            <div class="input-field col s12 sexoDiv" id="sexoDiv">
+                                <select title="Sexo" id="sexo"   >
+                                    <option value="" disabled selected>&nbsp;&nbsp;&nbsp;  Escolha uma opção</option>
+                                    <option value="1">Masculino</option>
+                                    <option value="2">Feminino</option>
+                                    <option value="3">Intersexo ou Indeterminado</option>
+                                    <option value="6">Não declarado/descrito inadequadamente</option>
+                                </select>
+                                <label>Sexo: *</label>
+                            </div>
+                        </td>
+                        <td>
+                            <label for="dataNascimento" >Data Nascimento: *</label>
+                            <input type="text" class="datepicker" id="dataNascimento">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="nomeSemTt" class="inline">Nome (Sem títulos e sobrenome): *</label>
+                            <input type="text" id="nomeSemTt" class="inline"  title="Nome sem título e sobrenome" value=" " />
+                        </td>
+                        <td>
+                            <label for="sobreNomeSPA" class="inline">Sobrenome: *</label>
+                            <input type="text" id="sobreNomeSPA" class="inline"  title="Sobrenomes do paciente" value="" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="titulos" class="inline">Títulos: </label>
+                            <input type="text" id="titulos" class="inline"  title="Títulos"  value=" "/>
+                        </td>
+
+                        <td>
+                            <label for="nomePreferido" class="inline">Prefere ser chamado de: *</label>
+                            <input type="text" id="nomePreferido" class="inline"  title="Nome preferido" value="" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td >
+                            <label for="nomeSolteiro" class="inline">Nome Solteiro (a): </label>
+                            <input type="text" id="nomeSolteiro" class="inline"  title="Nome solteiro"  value=""/>
+                        </td>
+                        <td >
+                            <div class="input-field col s12" id="usoCondicionalDiv" >
+                                <select title="Uso condicional" id="usoCondicional">
+                                    <option value="" disabled selected>&nbsp;&nbsp;&nbsp;  Escolha uma opção</option>
+                                    <option value="1">Informação não confiável</option>
+                                    <option value="2">Nome com erro de digitação</option>
+                                    <option value="3">Nome para não ser usado</option>
+                                    <option value="4">Vínculo do nome proibido por lei</option>
+                                    <option value="6">Requisito de privacidade/segurança especial</option>
+                                    <option value="9">Nome temporário</option>
+                                </select>
+                                <label>Uso condicional: </label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="dataObito" >Data Óbito: *</label>
+                            <input type="text" class="datepicker" id="dataObito">
+                        </td>
+                        <td >
+                            <div class="input-field col s12" id="usoNomeDiv">
+                                <select title="Grupo utilização do nome" id="usoNome">
+                                    <option value="1">&nbsp;&nbsp;&nbsp;Relatório</option>
+                                    <option value="2">&nbsp;&nbsp;&nbsp;Nome recém-nascido</option>
+                                </select>
+                                <label>Utilização Nome: *</label>
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <div class="card-panel  grey lighten-2 ocultar" id="cadastroId">
+                <table>
+                    <thead>
+                    <tr>
+                        <th colspan="2">Identificador</th>
+                    </tr>
+                    </thead>
+                    <tr>
+                        <td>
+                            <label for="designacaoID" class="inline">Designação do Identificador do Indivíduo: *</label>
+                            <input type="text" id="designacaoID" class="inline"  title="Designação do Identificador do Indivíduo" />
+                        </td>
+                        <td >
+                            <div class="input-field col s12" id="tipoIdDiv" >
+                                <select title="Tipo Identificador" id="tipoId">
+                                    <option value="" disabled selected>&nbsp;&nbsp;&nbsp;Escolha uma opção</option>
+                                    <option value="1">Local</option>
+                                    <option value="2">Área/Região/Distrito</option>
+                                    <option value="3">Estado/Província/Território</option>
+                                    <option value="4">Indentificador Nacional</option>
+                                </select>
+                                <label>Tipo Identificador: *</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="emissorId" class="inline">Emissor do identificador do paciente: *</label>
+                            <input type="text" id="emissorId" class="inline"  title="Emissor do identificador do paciente" value="" />
+                        </td>
+                        <td>
+                            <label for="dataEmissaoId" class="inline">Data Emissão: *</label>
+                            <input type="text" class="datepicker" id="dataEmissaoId" title="Data Emissão do identificador do paciente" value="">
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <thead>
+                    <tr>
+                        <th colspan="4">Certidão de Nascimento</th>
+                    </tr>
+                    </thead>
+                    <tr>
+                        <td>
+                            <label class="inline">Nome do Cartório: *</label>
+                            <input type="text" class="form-control" id="nomeCartorio" title="nomeCartorio" value="">
+                        </td>
+                        <td>
+                            <label class="inline">Livro: *</label>
+                            <input type="number" class="form-control" id="livro" title="Livro cartorio" value="">
+                        </td>
+                        <td>
+                            <label class="inline">Folha: *</label>
+                            <input type="number" class="form-control" id="folha" title="folha cartorio" value="">
+                        </td>
+                        <td>
+                            <label class="inline">Termo: </label>
+                            <input type="number" class="form-control" id="termo" title="Termo do cartório" value="">
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <div class="card-panel  grey lighten-2 ocultar" id="cadastroEndereco">
+
+                <table>
+                    <thead>
+                    <tr>
+                        <th colspan="3">Contato</th>
+                    </tr>
+                    </thead>
+                    <tr>
+                        <td >
+                            <label for="telefoneFixo" class="inline" >Telefone Fixo: </label>
+                            <input type="text" id="telefoneFixo" class="inline"  title="Telefone Fixo" value="" />
+                        </td>
+                        <td>
+                            <label for="celular" class="inline">Celular: </label>
+                            <input type="text" id="celular" class="inline"  title="Telefone Celular" value="" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td >
+                            <label for="contato" class="inline" >Contato: </label>
+                            <input type="text" id="contato" class="inline"  title="Telefone Recado:" value="" />
+                        </td>
+                        <td>
+                            <label for="email" class="inline">E-mail: </label>
+                            <input type="text" id="email" class="inline"  title="E-mail:" value="" />
+                        </td>
+                    </tr>
+                </table>
+
+                <table>
+                    <thead>
+                    <tr>
+                        <th colspan="3">Endereço</th>
+                    </tr>
+                    </thead>
+                    <tr>
+                        <td colspan="2">
+                            <label for="endereco" class="inline" >Endereço: </label>
+                            <input type="text" id="endereco" class="inline"  title="Endereço do Paciente" value="" />
+                        </td>
+                        <td>
+                            <label for="complemento" class="inline">Complemento: </label>
+                            <input type="text" id="complemento" class="inline"  title="Complemento do endereço do Paciente" value="" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="input-field col s12" id="estadoDiv" >
+                                <select title="Estado" id="estado">
+                                    <option value="" disabled selected>&nbsp;&nbsp;&nbsp;  Escolha uma opção</option>
+                                    <option value="11">Rondônia</option>
+                                    <option value="12">Acre</option>
+                                    <option value="13">Amazonas</option>
+                                    <option value="14">Roraima</option>
+                                    <option value="15">Pará</option>
+                                    <option value="16">Amapá</option>
+                                    <option value="17">Tocantins</option>
+                                    <option value="21">Maranhão</option>
+                                    <option value="22">Piauí</option>
+                                    <option value="23">Ceará</option>
+                                    <option value="24">Rio Grande do Norte</option>
+                                    <option value="25">Paraíba</option>
+                                    <option value="26">Pernambuco</option>
+                                    <option value="27">Alagoas</option>
+                                    <option value="28">Sergipe</option>
+                                    <option value="29">Bahia</option>
+                                    <option value="31">Minas Gerais</option>
+                                    <option value="32">Espírito Santo</option>
+                                    <option value="33">Rio de Janeiro</option>
+                                    <option value="35">São Paulo</option>
+                                    <option value="41">Paraná</option>
+                                    <option value="42">Santa Catarina</option>
+                                    <option value="43">Rio Grande do Sul</option>
+                                    <option value="50">Mato Grosso do Sul</option>
+                                    <option value="51">Mato Grosso</option>
+                                    <option value="52">Goiás</option>
+                                    <option value="53">Distrito Federal</option>
+                                </select>
+                                <label>Estado: </label>
+                            </div>
+                        </td>
+
+                        <td>
+                            <label for="municipio" class="inline">Nome Município: </label>
+                            <input type="text" id="municipio" class="inline"  title="Nome Municipio" value="" />
+                        </td>
+                        <td>
+                            <label for="CEP" class="inline">CEP: </label>
+                            <input type="text" maxlength="8" id="CEP" class="inline"  title="CEP" value="" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="center">
+                <ul class="pagination">
+                    <li class="waves-effect active" id="bttCadNomeli"><a href="#" onclick="abrirCadNomes(1)" id="bttCadNome">1</a> </li>
+                    <li class="waves-effect " id="bttCadIdli"><a href="#" onclick="abrirCadNomes(2)" id="bttCadId">2</a></li>
+                    <li class="waves-effect " id="bttCadEndli" ><a href="#" onclick="abrirCadNomes(3)" id="bttCadEnd">3</a></li>
+                </ul>
+            </div>
+            <div class="center">
+                <a class="waves-effect waves-light btn" onclick="limparFormulario()"><i class="material-icons left" >clear</i>Limpar</a>
+                <a class="waves-effect waves-light btn" onclick="gravarPessoa()" id="gravarCad"><i class="material-icons left" >done</i>Concluir</a>
+                <a class="waves-effect waves-light btn ocultar" onclick="alterarPessoa()" id="alterarCad"><i class="material-icons left" >edit</i>Alterar</a>
+            </div>
+        </div>
+
+        <div class="container ocultar" id="consulta">
+            <h4 class="materialize-red-text text-lighten-3 center" > Consultar SDA</h4>
+
+            <div class="card-panel  grey lighten-2">
+                <table id="tdCadPessoa" class="responsive-table">
+                    <thead>
+                        <tr>
+                            <th >ID Paciente </th>
+                            <th >Designação do indivíduo </th>
+                            <th >Emissor ID</th>
+                            <th >Nome Completo </th>
+                            <th >Sexo </th>
+                            <th >Data Nascimento </th>
+                            <th >Opções </th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+
+            <div class="center">
+                <a class="waves-effect waves-light btn" onclick="listarPessoas()"><i class="material-icons left" >dvr</i>Listar</a>
+            </div>
+
+        </div>
+
+
+        <script type="text/javascript" src="resources/js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="resources/js/funcionalidadesTela.js"></script>
+        <script type="text/javascript" src="resources/js/materialize.min.js"></script>
+        <script type="text/javascript" src="resources/js/funcionalidades.js"></script>
+
+    </body>
+</html>

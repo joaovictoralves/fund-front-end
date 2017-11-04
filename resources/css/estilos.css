@@ -1,0 +1,31 @@
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+iframe{
+    border: 0px none;
+}
+
+
+
+
+.ocultar{
+    display: none;
+}
+
+.mostrar{
+    display: inherit;
+}
+
+.inline{
+    display: inline !important;
+}
+
+
